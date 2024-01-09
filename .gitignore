@@ -27,3 +27,7 @@
 .dart_tool/
 .packages
 build/
+
+#fvm
+.fvm/flutter_sdk
+

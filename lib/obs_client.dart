@@ -49,7 +49,7 @@ class OBSClient {
   static Future<OBSResponse?> putFile(String objectName, File file,{String xObsAcl = "public-read"}) async{
     var contentMD5 = await getFileMd5Base64(file);
     var stream = file.openRead();
-    OBSResponse? obsResponse = await put(objectName, stream, contentMD5, await file.length() xObsAcl: xObsAcl);
+    OBSResponse? obsResponse = await put(objectName, stream, contentMD5, await file.length(), xObsAcl: xObsAcl);
     return obsResponse;
   }
 
